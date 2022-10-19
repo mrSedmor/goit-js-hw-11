@@ -8,7 +8,33 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/example.html"></include> -->
+    <header class="header">
+      <div class="container">
+        <form class="search-form" id="search-form">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              name="searchQuery"
+              autocomplete="off"
+              placeholder="Search images..."
+            />
+            <button type="submit" class="btn">Search</button>
+          </div>
+        </form>
+      </div>
+    </header>
+    <main>
+      <div class="section">
+        <div class="container">
+          <div class="gallery">
+            <!-- Карточки изображений -->
+          </div>
+          <!-- <div class="gallery-end"></div> -->
+          <!-- <button type="button" class="load-more btn">Load more</button> -->
+        </div>
+      </div>
+    </main>
   </body>
 </html>

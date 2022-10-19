@@ -1,2 +1,106 @@
 @import './common';
-@import './example';
+
+body {
+  padding-top: 50px;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+.gallery {
+  display: grid;
+  gap: 20px;
+
+  @media screen and (min-width: 670px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.container {
+  min-width: 350px;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 15px 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #3f56eb;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  padding-block: 10px;
+}
+
+.form-control {
+  border-width: 1px;
+  border-radius: 6px 0 0 6px;
+  border-color: #00000040;
+  padding: 6px;
+  outline: none;
+  line-height: 1.4;
+}
+
+.btn {
+  padding: 6px;
+  border-width: 1px 1px 1px 0;
+  border-radius: 0 6px 6px 0;
+  border-color: #00000040;
+  outline: none;
+  line-height: 1.4;
+  transition: background-color 250ms;
+
+  &:focus,
+  &:hover {
+    background-color: #acacac;
+  }
+}
+
+.photo-card {
+  box-shadow: 5px 5px 10px #00000040;
+}
+
+.photo {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  aspect-ratio: 1.5;
+  object-position: center;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+}
+
+.info-item {
+  flex-grow: 1;
+  text-align: center;
+  & b {
+    display: block;
+  }
+}
