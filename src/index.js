@@ -19,7 +19,7 @@ refs.gallery.insertAdjacentElement('afterend', refs.galleryEnd);
 refs.searchForm.addEventListener('submit', onSearchFormSubmit);
 // refs.loadMoreButton.addEventListener('click', loadMoreImages);
 
-let observer = new IntersectionObserver(onEmergeInScreen, {
+let observer = new IntersectionObserver(onGalleryEndReached, {
   rootMargin: '0px 0px 600px 0px',
 });
 
@@ -138,7 +138,7 @@ async function loadMoreImages() {
   }
 }
 
-function onEmergeInScreen([entry]) {
+function onGalleryEndReached([entry]) {
   if (entry.isIntersecting) {
     loadMoreImages();
   }
